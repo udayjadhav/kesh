@@ -1,0 +1,89 @@
+{"text": "hey kesh", "intent": "CHAT_GENERAL", "domain": "CHAT"}
+{"text": "thanks a lot", "intent": "CHAT_GENERAL", "domain": "CHAT"}
+{"text": "morning", "intent": "CHAT_GENERAL", "domain": "CHAT"}
+{"text": "Explain REST", "intent": "LLM_EXPLAIN", "domain": "LLM"}
+{"text": "What is Kafka?", "intent": "LLM_EXPLAIN", "domain": "LLM"}
+{"text": "what does this stack trace mean", "intent": "LLM_EXPLAIN", "domain": "LLM"}
+{"text": "1+1", "intent": "LLM_EXPLAIN", "domain": "LLM"}
+{"text": "compare Python and Java", "intent": "LLM_COMPARE", "domain": "LLM"}
+{"text": "what's the difference between lists and vectors", "intent": "LLM_COMPARE", "domain": "LLM"}
+{"text": "design an idempotent payment API", "intent": "LLM_DESIGN", "domain": "LLM"}
+{"text": "Tell me how to run mvn test", "intent": "LLM_CODE_HELP", "domain": "LLM"}
+{"text": "How do I open Chrome programmatically?", "intent": "LLM_CODE_HELP", "domain": "LLM"}
+{"text": "How do I run git status?", "intent": "LLM_CODE_HELP", "domain": "LLM"}
+{"text": "Hello world Java program", "intent": "LLM_CODE_HELP", "domain": "LLM"}
+{"text": "give me a concise summary of REST", "intent": "LLM_SUMMARIZE", "domain": "LLM"}
+{"text": "format that comparison as a table", "intent": "LLM_FORMAT", "domain": "LLM"}
+{"text": "which Java version is installed?", "intent": "RUNTIME_INSPECT", "domain": "SYSTEM"}
+{"text": "what version of cursor is on this mac", "intent": "RUNTIME_INSPECT", "domain": "SYSTEM"}
+{"text": "check my installed node runtime", "intent": "RUNTIME_INSPECT", "domain": "SYSTEM"}
+{"text": "Open Chrome", "intent": "APP_OPEN", "domain": "SYSTEM"}
+{"text": "launch Google Chrome", "intent": "APP_OPEN", "domain": "SYSTEM"}
+{"text": "focus Chrome", "intent": "APP_FOCUS", "domain": "SYSTEM"}
+{"text": "quit Chrome", "intent": "APP_QUIT", "domain": "SYSTEM"}
+{"text": "list running applications", "intent": "SYSTEM_INFO", "domain": "SYSTEM"}
+{"text": "read the README.md file in ~/Kesh", "intent": "FILE_READ", "domain": "TOOLS"}
+{"text": "search my project for authentication", "intent": "FILE_SEARCH", "domain": "TOOLS"}
+{"text": "list files in my project", "intent": "FILE_LIST", "domain": "TOOLS"}
+{"text": "what is the latest Java version?", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "latest Java version", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "What's the latest Spring Boot release?", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "can you check weather in Pune", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "how is weather in Pune", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "What does Kafka documentation say?", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "Read https://spring.io and explain it", "intent": "WEB_FETCH", "domain": "WEB"}
+{"text": "Research the current state of Kafka exactly-once processing.", "intent": "WEB_RESEARCH", "domain": "WEB"}
+{"text": "crawl https://example.com/docs", "intent": "WEB_CRAWL", "domain": "WEB"}
+{"text": "what does our documentation say about Kafka?", "intent": "RAG_QUERY", "domain": "RAG"}
+{"text": "What does our README say about authentication?", "intent": "RAG_QUERY", "domain": "RAG"}
+{"text": "summarize our architecture documents", "intent": "RAG_SUMMARIZE", "domain": "RAG"}
+{"text": "compare our onboarding notes", "intent": "RAG_COMPARE", "domain": "RAG"}
+{"text": "research our local docs about caching", "intent": "RAG_DOCUMENT_RESEARCH", "domain": "RAG"}
+{"text": "show my unread slack messages", "intent": "SLACK", "domain": "WORK"}
+{"text": "Search Jira", "intent": "JIRA", "domain": "WORK"}
+{"text": "what are my Jira issues?", "intent": "JIRA", "domain": "WORK"}
+{"text": "search confluence for onboarding", "intent": "CONFLUENCE", "domain": "WORK"}
+{"text": "show my github pull requests", "intent": "GITHUB", "domain": "WORK"}
+{"text": "check unread gmail", "intent": "GMAIL", "domain": "WORK"}
+{"text": "what's on my calendar", "intent": "CALENDAR", "domain": "WORK"}
+{"text": "run mvn test", "intent": "TERMINAL_EXECUTION", "domain": "TERMINAL"}
+{"text": "Run git status.", "intent": "TERMINAL_EXECUTION", "domain": "TERMINAL"}
+{"text": "Run curl https://example.com", "intent": "TERMINAL_EXECUTION", "domain": "TERMINAL"}
+{"text": "delete this file notes.md", "intent": "DESTRUCTIVE", "domain": "TOOLS"}
+{"text": "research Kafka exactly-once semantics and compare it with our implementation", "intent": "WEB_RESEARCH", "domain": "WEB", "intents": ["WEB_RESEARCH", "FILE_SEARCH", "LLM_COMPARE"]}
+{"text": "Find the latest Kafka documentation and compare it with our implementation.", "intent": "WEB_SEARCH", "domain": "WEB", "intents": ["WEB_SEARCH", "RAG_QUERY", "LLM_COMPARE"]}
+{"text": "How do I search Jira?", "intent": "LLM_CODE_HELP", "domain": "LLM"}
+{"text": "how can I open Chrome?", "intent": "LLM_CODE_HELP", "domain": "LLM"}
+{"text": "search the internet for authentication best practices", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "open Safari", "intent": "APP_OPEN", "domain": "SYSTEM"}
+{"text": "what files are in this repo", "intent": "FILE_LIST", "domain": "TOOLS"}
+{"text": "what did we decide about releases?", "intent": "RAG_QUERY", "domain": "RAG"}
+{"text": "Run mvn test in my project", "intent": "TERMINAL_EXECUTION", "domain": "TERMINAL"}
+{"text": "fix grammar: I wanted to check if there is any updates", "intent": "WRITING_CORRECT_GRAMMAR", "domain": "WRITING"}
+{"text": "Fix the grammar in this.", "intent": "WRITING_CORRECT_GRAMMAR", "domain": "WRITING"}
+{"text": "make this professional: hey, any update?", "intent": "WRITING_PROFESSIONAL", "domain": "WRITING"}
+{"text": "make this Slack-friendly: I would like to request an update", "intent": "WRITING_DRAFT_SLACK", "domain": "WRITING"}
+{"text": "write a recruiter follow-up email", "intent": "WRITING_DRAFT_EMAIL", "domain": "WRITING"}
+{"text": "Write a professional email.", "intent": "WRITING_DRAFT_EMAIL", "domain": "WRITING"}
+{"text": "reply saying I agree but Friday works better", "intent": "WRITING_DRAFT_REPLY", "domain": "WRITING"}
+{"text": "Reply to this email.", "intent": "WRITING_DRAFT_REPLY", "domain": "WRITING"}
+{"text": "make this less aggressive", "intent": "WRITING_DIPLOMATIC", "domain": "WRITING"}
+{"text": "make this sound like a senior engineer", "intent": "WRITING_CONFIDENT", "domain": "WRITING"}
+{"text": "make this 50% shorter", "intent": "WRITING_SHORTEN", "domain": "WRITING"}
+{"text": "fix grammar but don't change my wording", "intent": "WRITING_CORRECT_GRAMMAR", "domain": "WRITING", "intents": ["WRITING_CORRECT_GRAMMAR", "WRITING_PRESERVE_MEANING"]}
+{"text": "turn this into a Jira comment", "intent": "WRITING_DRAFT_JIRA", "domain": "WRITING"}
+{"text": "write a PR description from this diff", "intent": "WRITING_DRAFT_PR", "domain": "WRITING"}
+{"text": "make this sound more natural", "intent": "WRITING_NATURALIZE", "domain": "WRITING"}
+{"text": "How do I write a professional email?", "intent": "LLM_EXPLAIN", "domain": "LLM"}
+{"text": "How can I fix grammar in this?", "intent": "LLM_EXPLAIN", "domain": "LLM"}
+{"text": "How should I write a Slack message?", "intent": "LLM_EXPLAIN", "domain": "LLM"}
+{"text": "How should I reply to this email?", "intent": "LLM_EXPLAIN", "domain": "LLM"}
+{"text": "Make this Slack message shorter.", "intent": "WRITING_SHORTEN", "domain": "WRITING"}
+{"text": "format this message", "intent": "WRITING_FORMAT", "domain": "WRITING"}
+{"text": "Hi Team , Not feelin well , day off\n\nformat this message", "intent": "WRITING_FORMAT", "domain": "WRITING"}
+{"text": "tell me about AI system design", "intent": "LLM_EXPLAIN", "domain": "LLM"}
+{"text": "what are the latest AI system design patterns?", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "search the web for AI system design", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "can you summarize above response", "intent": "WRITING_SUMMARIZE", "domain": "WRITING"}
+{"text": "traffic in Pune between Wadgaon Sheri to Yerwada now", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "Explain RAG.", "intent": "LLM_EXPLAIN", "domain": "LLM"}

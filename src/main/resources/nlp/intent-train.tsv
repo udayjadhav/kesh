@@ -1,0 +1,113 @@
+CHAT	hello
+CHAT	hi there
+CHAT	how are you
+CHAT	what can you do
+CHAT	explain how kafka works
+CHAT	summarize this idea for me
+CHAT	what is spring boot
+CHAT	thanks that helps
+CHAT	tell me a joke
+CHAT	why did the last answer fail
+CHAT	can you help me think through this design
+CHAT	what does this error message mean
+CHAT	good morning
+CHAT	who are you
+CHAT	write a short explanation of REST
+CHAT	compare clojure and java
+CHAT	use a markdown table
+CHAT	what is the difference between rust and go
+CHAT	what is kafka
+CHAT	what is dependency injection
+CHAT	explain REST
+INSPECT	what version of java is installed
+INSPECT	tell me what version of java installed on this mac
+INSPECT	what node version is installed
+INSPECT	what version of node is on this mac
+INSPECT	is python installed
+INSPECT	which java version is installed
+INSPECT	which cursor version
+INSPECT	which is mac version
+INSPECT	what macos version do I have
+INSPECT	what version of cursor is installed
+INSPECT	java -version
+INSPECT	node -v
+WEB_SEARCH	what's the latest Spring Boot version
+WEB_SEARCH	What is the latest Java version
+WEB_SEARCH	current Java release
+WEB_SEARCH	search the web for recent Kafka developments
+WEB_SEARCH	latest Spring Boot release
+WEB_SEARCH	can you check weather in Pune
+WEB_SEARCH	what's the weather in London
+WEB_SEARCH	weather forecast for Mumbai today
+WEB_FETCH	Read https://spring.io and explain it
+WEB_FETCH	Read https://spring.io and summarize it
+WEB_FETCH	fetch https://example.com
+WEB_RESEARCH	Research CertifyOS and tell me about its technology stack
+WEB_RESEARCH	Research Spring Boot and Kafka integration
+WEB_RESEARCH	research the current state of Kafka exactly-once processing
+FILES	list files in ~/LocalGPT
+FILES	read the README.md file
+FILES	search java files for KafkaConsumer
+FILES	open the notes in Documents/Kesh
+FILES	show me what is in the Projects folder
+FILES	find all yaml files
+FILES	read src/main/resources/application.yml
+FILES	list the directory ~/Documents/Kesh
+FILES	search files containing TODO
+FILES	what files are in this repo
+FILES	read this path ~/LocalGPT/pom.xml
+FILES	look at the markdown notes
+APPS	open chrome
+APPS	open Google Chrome
+APPS	list running applications
+APPS	what apps are running
+APPS	focus Safari
+APPS	bring Notes to the front
+APPS	quit Slack
+APPS	launch Calendar
+APPS	open the browser
+APPS	list my running apps
+APPS	focus Google Chrome
+APPS	start Notes
+TERMINAL	run mvn test
+TERMINAL	execute git status
+TERMINAL	run docker ps
+TERMINAL	run a shell command
+TERMINAL	execute brew list
+TERMINAL	run gradle build
+TERMINAL	open a terminal and run ls
+TERMINAL	please run npm install
+TERMINAL	run lein test
+TERMINAL	execute find in the project
+WORK	show my unread slack messages
+WORK	any slack mentions for me
+WORK	list my jira issues
+WORK	what is on my jira board
+WORK	search confluence for onboarding
+WORK	check unread gmail
+WORK	show my github pull requests
+WORK	any new PRs on github
+WORK	post this to slack
+WORK	create a jira ticket
+WORK	look up the confluence page
+WORK	inbox in gmail
+DESTRUCTIVE	delete this file
+DESTRUCTIVE	remove notes.md
+DESTRUCTIVE	quit all applications
+DESTRUCTIVE	wipe that folder
+DESTRUCTIVE	rm the temp directory
+DESTRUCTIVE	delete everything in Documents/Kesh
+DESTRUCTIVE	force quit Chrome
+DESTRUCTIVE	trash these files
+DESTRUCTIVE	overwrite application.yml
+DESTRUCTIVE	format that disk
+DESTRUCTIVE	kill the running process
+DESTRUCTIVE	remove the whole directory
+WRITING	fix grammar in this
+WRITING	make this more professional
+WRITING	write a recruiter follow-up email
+WRITING	make this Slack-friendly
+WRITING	reply saying I agree but Friday works better
+WRITING	write a PR description
+WRITING	make this sound more natural
+WRITING	turn this into a Jira comment

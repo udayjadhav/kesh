@@ -1,0 +1,5 @@
+{"task": "WRITING_PROFESSIONAL", "context": "recruiter", "input": "hey, any update on the role?", "output": "Hi, just wanted to check if there are any updates regarding the role.", "accepted": true}
+{"task": "WRITING_NATURALIZE", "input": "I would like to kindly request an update regarding the aforementioned matter.", "output": "Could you please share an update on this?", "accepted": true}
+{"task": "WRITING_DRAFT_SLACK", "input": "I would like to request an update on the deployment status at your earliest convenience.", "output": "Any update on the deployment?", "accepted": true}
+{"task": "WRITING_CORRECT_GRAMMAR", "input": "I wanted to check if there is any updates", "output": "I wanted to check if there are any updates", "accepted": true}
+{"task": "WRITING_FORMAT", "input": "Hi Team , Not feelin well , day off", "output": "Hi Team,\n\nNot feeling well. Taking the day off today.", "accepted": true}

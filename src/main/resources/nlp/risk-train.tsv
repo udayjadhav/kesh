@@ -1,0 +1,47 @@
+READ	list files in the folder
+READ	read the readme
+READ	show running applications
+READ	search for KafkaConsumer
+READ	what is in this directory
+READ	unread slack messages
+READ	my jira issues
+READ	search confluence
+READ	unread emails
+READ	github pull requests
+READ	explain this file
+READ	find yaml files
+READ	list running apps
+READ	how are you
+READ	summarize the notes
+READ	latest spring boot release
+READ	search the web for kafka
+READ	read https://spring.io
+READ	research this company
+READ	weather in pune
+READ	what's the weather today
+WRITE	open chrome
+WRITE	open Google Chrome
+WRITE	focus Safari
+WRITE	write this into a file
+WRITE	save the notes
+WRITE	create a jira issue
+WRITE	post a slack message
+WRITE	send a gmail
+WRITE	open the browser
+WRITE	launch Calendar
+WRITE	bring Notes to the front
+WRITE	create a confluence page
+DANGEROUS	delete this file
+DANGEROUS	remove the folder
+DANGEROUS	quit Slack
+DANGEROUS	quit Google Chrome
+DANGEROUS	run rm on temp
+DANGEROUS	wipe the directory
+DANGEROUS	run a shell command
+DANGEROUS	execute mvn test
+DANGEROUS	run docker ps
+DANGEROUS	force quit the app
+DANGEROUS	overwrite application.yml
+DANGEROUS	kill that process
+DANGEROUS	format the disk
+DANGEROUS	trash these files

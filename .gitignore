@@ -1,0 +1,44 @@
+# Build
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE / editor
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+.calva/
+.clj-kondo/
+.joyride/
+.lsp/
+*.swp
+.DS_Store
+
+# Secrets and local env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+token*.json
+**/secrets/
+
+# Local runtime data (conversations, learning logs, caches)
+*.log
+.kesh/
+**/interactions.jsonl
+**/evaluations.jsonl
+**/feedback.jsonl
+
+# Benchmark output (regenerated locally)
+kesh-benchmark/latest-routing-report.md
+kesh-benchmark/out/
+
+# Python / ML local artifacts
+ml/**/__pycache__/
+ml/**/.venv/
+ml/**/models/
+*.pyc

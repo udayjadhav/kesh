@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="'Kesh · ' + ${deskLabel}">Kesh</title>
+    <link rel="stylesheet" th:href="@{/css/kesh.css(v=10)}">
+</head>
+<body th:attr="data-desk=${desk}">
+    <div class="app">
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-top">
+                <button type="button" id="hide-sidebar" class="ghost" aria-label="Hide recent chats">Hide</button>
+                <button type="button" id="new-chat" class="ghost">New chat</button>
+            </div>
+            <h2>Recent chats</h2>
+        <nav id="recent" class="recent" aria-label="Recent chats"></nav>
+    </aside>
+
+    <div class="main">
+        <header class="topbar">
+            <button type="button" id="show-sidebar" class="ghost reveal" aria-label="Show recent chats">Chats</button>
+            <div class="desk-switch">
+                <span class="desk-badge" th:text="${deskLabel}">Work</span>
+                <a th:if="${desk == 'work'}" class="ghost desk-link" href="/personal">Personal</a>
+                <a th:if="${desk == 'personal'}" class="ghost desk-link" href="/work">Work</a>
+                <a class="ghost desk-link" th:href="'/' + ${desk} + '/learning'">Learning</a>
+            </div>
+            <div class="menus">
+                <details class="menu" id="commands-menu">
+                    <summary>Commands</summary>
+                    <ul>
+                        <li><button type="button" class="copy-cmd" data-cmd="What time is it">What time is it</button></li>
+                        <li><button type="button" class="copy-cmd" data-cmd="List my running applications">List my running applications</button></li>
+                        <li><button type="button" class="copy-cmd" data-cmd="Find Java files containing KafkaConsumer">Find Java files containing KafkaConsumer</button></li>
+                        <li><button type="button" class="copy-cmd" data-cmd="Read this file and explain it">Read this file and explain it</button></li>
+                        <li><button type="button" class="copy-cmd" data-cmd="What's the latest Spring Boot release?">Latest Spring Boot release</button></li>
+                        <li><button type="button" class="copy-cmd" data-cmd="Read https://spring.io and summarize it.">Read spring.io</button></li>
+                        <li><button type="button" class="copy-cmd" data-cmd="Research Spring Boot and Kafka integration.">Research Spring Boot + Kafka</button></li>
+                    </ul>
+                </details>
+                <details class="menu" id="tools-menu">
+                    <summary>Tools</summary>
+                    <ul id="tool-list"></ul>
+                </details>
+            </div>
+        </header>
+
+        <div class="chat-stage">
+            <div id="empty-state" class="empty-state">
+                <p>Start a chat</p>
+                <p class="empty-hint">Type below, or copy a command from the top right.</p>
+            </div>
+            <div id="thread" class="thread" tabindex="0" aria-label="Chat messages"></div>
+            <div class="scroll-rail">
+                <button type="button" id="scroll-top" class="scroll-btn" aria-label="Jump to first message" title="Jump to top">↑</button>
+                <button type="button" id="scroll-bottom" class="scroll-btn" aria-label="Jump to latest message" title="Jump to latest">↓</button>
+            </div>
+            <button type="button" id="jump-latest" class="jump-latest" hidden>Latest ↓</button>
+        </div>
+
+        <form id="composer" class="composer">
+            <div class="composer-shell">
+                <label class="sr-only" for="prompt">Message</label>
+                <textarea id="prompt" name="message" rows="1" th:placeholder="'Message Kesh on ' + ${deskLabel}" required></textarea>
+                <div class="composer-actions">
+                    <span class="composer-hint">Enter to send · Shift+Enter for a new line</span>
+                    <div class="composer-buttons">
+                        <button type="button" id="expand-composer" class="ghost composer-expand" aria-label="Expand message box" title="Expand">Expand</button>
+                        <button type="submit" id="send">Send</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script th:src="@{/js/kesh.js(v=10)}"></script>
+</body>
+</html>

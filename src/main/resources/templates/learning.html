@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="'Kesh learning · ' + ${deskLabel}">Kesh learning</title>
+    <link rel="stylesheet" th:href="@{/css/kesh.css(v=10)}">
+</head>
+<body th:attr="data-desk=${desk}">
+<div class="app learning-app">
+    <div class="main">
+        <header class="topbar">
+            <div class="desk-switch">
+                <span class="desk-badge" th:text="${deskLabel}">Work</span>
+                <a class="ghost desk-link" th:href="'/' + ${desk}">Back to chat</a>
+            </div>
+        </header>
+        <section class="learning-panel">
+            <h1>Learning review</h1>
+            <p class="empty-hint">Approved rows go into the training candidate file. They do not change live routing until a later training run.</p>
+            <div th:if="${candidates.isEmpty()}" class="empty-state">
+                <p>No pending corrections on this desk.</p>
+            </div>
+            <article class="learning-card" th:each="item : ${candidates}">
+                <p class="learning-text" th:text="${item.text()}">How do I run mvn test?</p>
+                <p class="learning-meta">
+                    Current: <code th:text="${item.predictedIntent()}">TERMINAL_EXECUTION</code>
+                    Suggested: <code th:text="${item.suggestedIntent()}">LLM_CODE_HELP</code>
+                </p>
+                <p class="learning-meta" th:if="${item.comment()}" th:text="${item.comment()}"></p>
+                <form class="learning-actions" th:attr="data-id=${item.id()}">
+                    <label>
+                        Correct intent
+                        <input type="text" name="correctIntent" th:value="${item.suggestedIntent()}">
+                    </label>
+                    <button type="button" class="approve learning-approve">Approve</button>
+                    <button type="button" class="secondary learning-reject">Reject</button>
+                </form>
+            </article>
+            <h2 th:if="${!approved.isEmpty()}">Recently approved</h2>
+            <ul class="learning-approved" th:if="${!approved.isEmpty()}">
+                <li th:each="row : ${approved}">
+                    <span th:text="${row.text()}">text</span>
+                    → <code th:text="${row.correctIntent()}">INTENT</code>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+<script>
+(() => {
+    const desk = document.body.dataset.desk || "work";
+    document.querySelectorAll(".learning-actions").forEach((form) => {
+        const id = form.dataset.id;
+        form.querySelector(".learning-approve").addEventListener("click", async () => {
+            const intent = form.querySelector("[name=correctIntent]").value;
+            await fetch("/" + desk + "/api/learning/" + id + "/approve", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ correctIntent: intent })
+            });
+            window.location.reload();
+        });
+        form.querySelector(".learning-reject").addEventListener("click", async () => {
+            await fetch("/" + desk + "/api/learning/" + id + "/reject", { method: "POST" });
+            window.location.reload();
+        });
+    });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+kesh:
+  llm:
+    provider: ollama
+    base-url: http://localhost:11434
+    model: gemma3
+    chat-path: /api/chat

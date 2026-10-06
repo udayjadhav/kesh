@@ -1,0 +1,61 @@
+{"text": "hey kesh", "intent": "CHAT_GENERAL", "domain": "CHAT"}
+{"text": "thanks a lot", "intent": "CHAT_GENERAL", "domain": "CHAT"}
+{"text": "morning", "intent": "CHAT_GENERAL", "domain": "CHAT"}
+{"text": "Explain REST", "intent": "LLM_EXPLAIN", "domain": "LLM"}
+{"text": "What is Kafka?", "intent": "LLM_EXPLAIN", "domain": "LLM"}
+{"text": "what does this stack trace mean", "intent": "LLM_EXPLAIN", "domain": "LLM"}
+{"text": "1+1", "intent": "LLM_EXPLAIN", "domain": "LLM"}
+{"text": "compare Python and Java", "intent": "LLM_COMPARE", "domain": "LLM"}
+{"text": "what's the difference between lists and vectors", "intent": "LLM_COMPARE", "domain": "LLM"}
+{"text": "design an idempotent payment API", "intent": "LLM_DESIGN", "domain": "LLM"}
+{"text": "Tell me how to run mvn test", "intent": "LLM_CODE_HELP", "domain": "LLM"}
+{"text": "How do I open Chrome programmatically?", "intent": "LLM_CODE_HELP", "domain": "LLM"}
+{"text": "How do I run git status?", "intent": "LLM_CODE_HELP", "domain": "LLM"}
+{"text": "Hello world Java program", "intent": "LLM_CODE_HELP", "domain": "LLM"}
+{"text": "give me a concise summary of REST", "intent": "LLM_SUMMARIZE", "domain": "LLM"}
+{"text": "format that comparison as a table", "intent": "LLM_FORMAT", "domain": "LLM"}
+{"text": "which Java version is installed?", "intent": "RUNTIME_INSPECT", "domain": "SYSTEM"}
+{"text": "what version of cursor is on this mac", "intent": "RUNTIME_INSPECT", "domain": "SYSTEM"}
+{"text": "check my installed node runtime", "intent": "RUNTIME_INSPECT", "domain": "SYSTEM"}
+{"text": "Open Chrome", "intent": "APP_OPEN", "domain": "SYSTEM"}
+{"text": "launch Google Chrome", "intent": "APP_OPEN", "domain": "SYSTEM"}
+{"text": "focus Chrome", "intent": "APP_FOCUS", "domain": "SYSTEM"}
+{"text": "quit Chrome", "intent": "APP_QUIT", "domain": "SYSTEM"}
+{"text": "list running applications", "intent": "SYSTEM_INFO", "domain": "SYSTEM"}
+{"text": "read the README.md file in ~/Kesh", "intent": "FILE_READ", "domain": "TOOLS"}
+{"text": "search my project for authentication", "intent": "FILE_SEARCH", "domain": "TOOLS"}
+{"text": "list files in my project", "intent": "FILE_LIST", "domain": "TOOLS"}
+{"text": "what is the latest Java version?", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "latest Java version", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "What's the latest Spring Boot release?", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "can you check weather in Pune", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "how is weather in Pune", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "What does Kafka documentation say?", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "Read https://spring.io and explain it", "intent": "WEB_FETCH", "domain": "WEB"}
+{"text": "Research the current state of Kafka exactly-once processing.", "intent": "WEB_RESEARCH", "domain": "WEB"}
+{"text": "crawl https://example.com/docs", "intent": "WEB_CRAWL", "domain": "WEB"}
+{"text": "what does our documentation say about Kafka?", "intent": "RAG_QUERY", "domain": "RAG"}
+{"text": "What does our README say about authentication?", "intent": "RAG_QUERY", "domain": "RAG"}
+{"text": "summarize our architecture documents", "intent": "RAG_SUMMARIZE", "domain": "RAG"}
+{"text": "compare our onboarding notes", "intent": "RAG_COMPARE", "domain": "RAG"}
+{"text": "research our local docs about caching", "intent": "RAG_DOCUMENT_RESEARCH", "domain": "RAG"}
+{"text": "show my unread slack messages", "intent": "SLACK", "domain": "WORK"}
+{"text": "Search Jira", "intent": "JIRA", "domain": "WORK"}
+{"text": "what are my Jira issues?", "intent": "JIRA", "domain": "WORK"}
+{"text": "search confluence for onboarding", "intent": "CONFLUENCE", "domain": "WORK"}
+{"text": "show my github pull requests", "intent": "GITHUB", "domain": "WORK"}
+{"text": "check unread gmail", "intent": "GMAIL", "domain": "WORK"}
+{"text": "what's on my calendar", "intent": "CALENDAR", "domain": "WORK"}
+{"text": "run mvn test", "intent": "TERMINAL_EXECUTION", "domain": "TERMINAL"}
+{"text": "Run git status.", "intent": "TERMINAL_EXECUTION", "domain": "TERMINAL"}
+{"text": "Run curl https://example.com", "intent": "TERMINAL_EXECUTION", "domain": "TERMINAL"}
+{"text": "delete this file notes.md", "intent": "DESTRUCTIVE", "domain": "TOOLS"}
+{"text": "research Kafka exactly-once semantics and compare it with our implementation", "intent": "WEB_RESEARCH", "domain": "WEB", "intents": ["WEB_RESEARCH", "FILE_SEARCH", "LLM_COMPARE"]}
+{"text": "Find the latest Kafka documentation and compare it with our implementation.", "intent": "WEB_SEARCH", "domain": "WEB", "intents": ["WEB_SEARCH", "RAG_QUERY", "LLM_COMPARE"]}
+{"text": "How do I search Jira?", "intent": "LLM_CODE_HELP", "domain": "LLM"}
+{"text": "how can I open Chrome?", "intent": "LLM_CODE_HELP", "domain": "LLM"}
+{"text": "search the internet for authentication best practices", "intent": "WEB_SEARCH", "domain": "WEB"}
+{"text": "open Safari", "intent": "APP_OPEN", "domain": "SYSTEM"}
+{"text": "what files are in this repo", "intent": "FILE_LIST", "domain": "TOOLS"}
+{"text": "what did we decide about releases?", "intent": "RAG_QUERY", "domain": "RAG"}
+{"text": "Run mvn test in my project", "intent": "TERMINAL_EXECUTION", "domain": "TERMINAL"}

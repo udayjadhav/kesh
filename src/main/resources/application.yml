@@ -1,0 +1,171 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: kesh
+  thymeleaf:
+    cache: false
+
+kesh:
+  llm:
+    provider: docker-model-runner
+    base-url: http://localhost:12434
+    model: docker.io/ai/gemma3:latest
+    chat-path: /engines/v1/chat/completions
+    connect-timeout-ms: 10000
+    request-timeout-ms: 180000
+  agent:
+    max-iterations: 10
+  filesystem:
+    allowed-paths:
+      - ${user.home}/Projects
+      - ${user.home}/Documents/Kesh
+      - ${user.home}/Kesh
+    personal-paths:
+      - ${user.home}/Documents
+      - ${user.home}/Kesh
+    max-read-bytes: 524288
+    max-search-matches: 50
+    max-list-entries: 200
+  terminal:
+    enabled: false
+    timeout-seconds: 30
+    allowed-commands:
+      - git
+      - mvn
+      - java
+      - gradle
+      - lein
+      - docker
+      - podman
+      - ls
+      - pwd
+      - find
+      - grep
+  applications:
+    enabled: true
+  integrations:
+    slack:
+      enabled: false
+      bot-token: ${KESH_SLACK_BOT_TOKEN:}
+      user-token: ${KESH_SLACK_USER_TOKEN:}
+    jira:
+      enabled: false
+      base-url: ${KESH_JIRA_BASE_URL:}
+      email: ${KESH_JIRA_EMAIL:}
+      api-token: ${KESH_JIRA_API_TOKEN:}
+    confluence:
+      enabled: false
+      base-url: ${KESH_CONFLUENCE_BASE_URL:}
+      email: ${KESH_CONFLUENCE_EMAIL:}
+      api-token: ${KESH_CONFLUENCE_API_TOKEN:}
+    gmail:
+      enabled: false
+      client-id: ${KESH_GMAIL_CLIENT_ID:}
+      client-secret: ${KESH_GMAIL_CLIENT_SECRET:}
+      refresh-token: ${KESH_GMAIL_REFRESH_TOKEN:}
+    github:
+      enabled: false
+      token: ${KESH_GITHUB_TOKEN:}
+      api-url: ${KESH_GITHUB_API_URL:https://api.github.com}
+  nlp:
+    enabled: true
+    classifier:
+      type: ${KESH_CLASSIFIER_TYPE:opennlp}
+      model: ${KESH_CLASSIFIER_MODEL:sentence-transformers/all-MiniLM-L6-v2}
+      endpoint: ${KESH_CLASSIFIER_ENDPOINT:http://127.0.0.1:8091}
+      high-confidence: 0.85
+      medium-confidence: 0.55
+      fallback-to-llm: true
+      clarification-enabled: true
+      judge-enabled: true
+      judge-max-retries: 2
+    context:
+      max-tokens: 4000
+      max-documents: 8
+      max-chunks: 12
+      max-tool-results: 8
+  workspace:
+    data-dir: ${user.home}/.kesh
+  rag:
+    enabled: true
+    knowledge-paths:
+      - ${user.home}/.kesh/knowledge
+      - ${user.home}/Documents/Kesh
+      - ${user.home}/Kesh/README.md
+      - ${user.home}/Kesh/data
+  web:
+    enabled: true
+    max-content-chars: 30000
+    user-agent: KeshLocalAssistant/0.1
+    search:
+      enabled: true
+      provider: ${KESH_WEB_SEARCH_PROVIDER:duckduckgo}
+      api-key: ${KESH_WEB_SEARCH_API_KEY:}
+      max-results: 5
+    fetch:
+      enabled: true
+      timeout-seconds: 15
+      max-response-size-mb: 5
+      max-redirects: 5
+    crawl:
+      enabled: true
+      max-pages: 10
+      max-depth: 2
+      same-domain-only: true
+    cache:
+      enabled: true
+      ttl-minutes: 30
+    rate-limit:
+      requests-per-domain-per-minute: 30
+  java-execution:
+    enabled: true
+    timeout-ms: 3000
+    start-grace-ms: 20000
+    memory-limit: 256m
+    cpu-limit: "0.5"
+    max-output-bytes: 32768
+    max-source-bytes: 16384
+    max-concurrent-executions: 2
+    jdk-version: "21"
+    image: eclipse-temurin:21-jdk
+    runtime: auto
+  learning:
+    enabled: true
+    async: true
+    auto-training: false
+    require-approval: true
+  model-router:
+    enabled: true
+    discover: true
+    refine-enabled: false
+    sync-judge-llm: false
+    ollama-base-url: http://127.0.0.1:11434
+    docker-model-runner-base-url: http://127.0.0.1:12434
+    chat-model: ""
+    code-model: ""
+    judge-model: ""
+    reasoning-model: ""
+    refiner-model: ""
+    writer-model: ""
+    models: []
+  writing:
+    enabled: true
+    language: en-US
+    llm-verify-corrections: false
+    semantic-check: true
+    semantic-threshold: 0.72
+  debug:
+    enabled: ${KESH_DEBUG:false}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,info
+  endpoint:
+    health:
+      show-details: never
+    metrics:
+      enabled: true
